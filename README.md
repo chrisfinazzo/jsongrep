@@ -160,11 +160,21 @@ users.[1].name:
 
 ## Installation
 
+Installing with Cargo:
+
 ```bash
 cargo install jsongrep
 ```
 
-The `jg` binary will be installed to `~/.cargo/bin`.
+The `jg` binary installs to `~/.cargo/bin`.
+
+Alternatively, you can install `jsongrep` using Homebrew:
+
+```bash
+brew install jsongrep
+```
+
+The `jg` binary installs to either `/opt/homebrew` (Apple Silicon) or `/usr/local` (Intel).
 
 ## CLI Usage
 
