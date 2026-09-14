@@ -8,26 +8,6 @@ pub mod dfa;
 pub(crate) mod nfa;
 pub mod parser;
 
-use serde_json_borrow::Value;
-
-/// Interface for query engine implementations.
-#[deprecated(
-    since = "0.9.0",
-    note = "Use `QueryDFA::find` directly. This trait will be removed in a future release."
-)]
-pub trait QueryEngine {
-    /// Finds all JSON pointers in the given JSON document that match the
-    /// specified query.
-    ///
-    /// Follows the semantics of `JSONPath`, returning the matched values as an
-    /// array of `JSONPointer` instances.
-    fn find<'a>(
-        &self,
-        json: &'a Value<'a>,
-        query: &'a Query,
-    ) -> Vec<JSONPointer<'a>>;
-}
-
 // Re-exports
 pub use ast::*;
 pub use common::{JSONPointer, PathType};
