@@ -27,6 +27,7 @@ exclude = [
   "rustfmt.toml",
   "flake.nix",
   "flake.lock",
+  ".envrc"
 ]
 
 [dependencies]
